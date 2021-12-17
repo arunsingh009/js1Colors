@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        main{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn{
+            width: 50%;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .colorVal{
+            width: 200px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bolder;   
+        }
+        #color{
+            filter: invert(1);
+            color: pur;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="btn">
+            <div class="btn1">
+            <button onclick="changeColor()">Get Colors</button>
+        </div>
+            <div class="colorVal">
+                <p id="color"></p>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        x = document.querySelector("main");
+       
+        function changeColor(){
+            let y;
+            const Colors = [];
+                Colors[0] = 'red',
+                Colors[1] = 'yellow',
+                Colors[2] = 'green',
+                Colors[3] = 'blue',
+                Colors[4] = 'black',
+                Colors[5] = 'blueviolet',
+                Colors[6] = 'navy-blue',
+                Colors[7] = 'orange',
+                Colors[8] = 'tomato',
+                Colors[9] = 'pink',
+                Colors[10] = 'purple',
+                Colors[11] = 'peru'
+
+            x.style.background = Colors[Math.floor(Math.random() * Colors.length)] ;
+            y = x.style.background;
+           document.getElementById("color").innerHTML = y;
+            
+        }
+
+    </script>
+    
+</body>
+</html>
